@@ -5,6 +5,8 @@
 #include "CaesarCipher.hpp"
 #include "CipherMode.hpp"
 
+#include <string>
+
 
 TEST_CASE("bad key inputs results in 0 shift", "[input]"){
     std::string alphabet{"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};

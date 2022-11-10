@@ -4,6 +4,8 @@
 
 #include "TransformChar.hpp"
 
+#include <string>
+
 TEST_CASE("Characters are uppercased", "[alphanumeric]") {
 
     const std::string upper{"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
@@ -27,7 +29,9 @@ TEST_CASE("Digits are transliterated", "[alphanuneric]") {
     REQUIRE( transformChar('9') == "NINE");
 }
 
-TEST_CASE("Special Characters are removed", "[punctuation") {
+TEST_CASE("Special Characters are removed", "[punctuation]") {
+    // is there a better way than listing all the punctuations? 
+    //haven't checked things like letters from other alphabets and too many of those to list no?
     std::string punctucation{"!£$%^&*()_-=+|`<>,./?#~][}{;:"};
     for (char mark : punctucation){
         REQUIRE( transformChar(mark) == "");

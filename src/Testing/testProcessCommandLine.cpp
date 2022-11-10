@@ -4,6 +4,10 @@
 
 #include "ProcessCommandLine.hpp"
 
+#include <string>
+#include <vector>
+
+
 // Could I put the settings definition up here as it's used by eeryone, or is that not allowed?
 
 TEST_CASE("--help input works", "input"){
