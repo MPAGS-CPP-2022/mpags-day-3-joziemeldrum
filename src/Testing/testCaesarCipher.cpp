@@ -13,7 +13,7 @@ TEST_CASE("bad key inputs results in 0 shift", "[input]"){
 
     // Only need to test one mode as the same key used for both, and set before we get to 
     // using the cryption mode?
-    CipherMode test_encryption{CipherMode::Encrypt};
+    CipherMode test_encryption{CipherMode::Encrypt}; // don't nec need to use a separate variable for this
 
     SECTION("string input to key"){
         CaesarCipher cipher{"x"};

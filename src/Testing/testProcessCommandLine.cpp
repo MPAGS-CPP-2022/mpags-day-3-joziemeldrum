@@ -10,7 +10,7 @@
 
 // Could I put the settings definition up here as it's used by eeryone, or is that not allowed?
 
-TEST_CASE("--help input works", "input"){
+TEST_CASE("--help input works", "[input]"){
     std::vector<std::string> args{"", "--help"};
     ProgramSettings settings{ false, false, "", "", "", CipherMode::Encrypt};
 
@@ -19,7 +19,7 @@ TEST_CASE("--help input works", "input"){
 }
 
 
-TEST_CASE("--version input works", "input"){
+TEST_CASE("--version input works", "[input]"){
     std::vector<std::string> args{"", "--version"};
     ProgramSettings settings{ false, false, "", "", "", CipherMode::Encrypt};
 
@@ -28,7 +28,7 @@ TEST_CASE("--version input works", "input"){
 }
 
 
-TEST_CASE("-i input works", "input"){
+TEST_CASE("-i input works", "[input]"){
     ProgramSettings settings{ false, false, "", "", "", CipherMode::Encrypt};
     
     SECTION("filename provided"){
@@ -43,7 +43,7 @@ TEST_CASE("-i input works", "input"){
 }
 
 
-TEST_CASE("-o input works", "input"){
+TEST_CASE("-o input works", "[input]"){
     ProgramSettings settings{ false, false, "", "", "", CipherMode::Encrypt};
     
     SECTION("filename provided"){
@@ -58,7 +58,7 @@ TEST_CASE("-o input works", "input"){
 }
 
 
-TEST_CASE("-k input works", "input"){
+TEST_CASE("-k input works", "[input]"){
     ProgramSettings settings{ false, false, "", "", "", CipherMode::Encrypt};
     
     SECTION("key provided"){
@@ -73,7 +73,7 @@ TEST_CASE("-k input works", "input"){
 }
 
 
-TEST_CASE("encryption input options works", "input"){
+TEST_CASE("encryption input options works", "[input]"){
     ProgramSettings settings{ false, false, "", "", "", CipherMode::Encrypt};
 
     SECTION("--decrypt"){
@@ -88,7 +88,7 @@ TEST_CASE("encryption input options works", "input"){
     }
 }
 
-TEST_CASE("invalid input doesn't work", "input"){
+TEST_CASE("invalid input doesn't work", "[input]"){
     // Not sure how to do this properly as can't test every possible wrong input? 
     // also if the bad input came after a -i or -o or -k it wouldn't need to be rejected?
     // very confused :(
